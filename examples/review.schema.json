@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Voice Stat - OW proposed public synthetic review contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "synthetic", "sessionLabel", "clock", "evidence", "cards", "limitations"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "synthetic": { "const": true },
+    "sessionLabel": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "clock": {
+      "type": "object", "additionalProperties": false,
+      "required": ["basis", "uncertainty"],
+      "properties": {
+        "basis": { "const": "relative-seconds" },
+        "uncertainty": { "type": "string", "minLength": 1, "maxLength": 500 }
+      }
+    },
+    "evidence": {
+      "type": "array", "minItems": 1, "maxItems": 500,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "kind", "atSeconds", "text"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z0-9-]{1,80}$" },
+          "kind": { "enum": ["call", "event"] },
+          "atSeconds": { "type": "number", "minimum": 0 },
+          "endSeconds": { "type": "number", "minimum": 0 },
+          "speaker": { "type": "string", "maxLength": 80 },
+          "text": { "type": "string", "minLength": 1, "maxLength": 2000 }
+        }
+      }
+    },
+    "cards": {
+      "type": "array", "minItems": 1, "maxItems": 100,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "observation", "question", "evidenceIds"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z0-9-]{1,80}$" },
+          "observation": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "question": { "type": "string", "minLength": 1, "maxLength": 1000 },
+          "evidenceIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^[A-Z0-9-]{1,80}$" } }
+        }
+      }
+    },
+    "limitations": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1, "maxLength": 2000 } }
+  }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101411">
+  <meta name="description" content="Voice Stat - OW is a local-first Overwatch review project connecting team communications and match context. Explore a synthetic review, architecture, and pilot setup.">
+  <meta property="og:title" content="Voice Stat - OW — Make the next review count.">
+  <meta property="og:description" content="Your team’s comms. Your machine. A clearer conversation after the scrim.">
+  <meta property="og:type" content="website">
+  <title>Voice Stat - OW — Make the next review count.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header wrap">
+  <a class="brand" href="./" aria-label="Voice Stat - OW home"><img src="assets/mark.svg" width="34" height="34" alt=""><span class="brand-name">Voice Stat <span class="brand-game">- OW</span></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav" type="button">Menu <span aria-hidden="true">+</span></button>
+  <nav id="nav" aria-label="Main navigation"><a href="#why">The idea</a><a href="#review">Review lab</a><a href="#workflow">Workflow</a><a href="docs/">Documentation <span aria-hidden="true">↗</span></a></nav>
+  <a class="header-cta" href="docs/getting-started.html">Get started <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="status-dot"></span> LOCAL-FIRST · OVERWATCH · IN DEVELOPMENT</div>
+      <h1 id="hero-title">Make the<br>next review<br><em>count.</em><span class="period" aria-hidden="true">↗</span></h1>
+      <p class="hero-lede">The fight is over. The useful conversation is just starting. Voice Stat - OW brings your team’s comms and match context into one place to review.</p>
+      <div class="actions"><a class="button primary" href="#review">Enter the review lab <span aria-hidden="true">↗</span></a><a class="text-link" href="docs/architecture.html">Explore the architecture <span aria-hidden="true">→</span></a></div>
+      <div class="hero-foot"><span>Built for teams that want to learn.</span><span>Designed to run on your machine.</span></div>
+    </div>
+    <div class="hero-instrument" aria-label="Illustrative communications review interface using synthetic data">
+      <div class="instrument-top"><span><i class="status-dot"></i> Voice Stat - OW / REVIEW ROOM</span><span>DEMO_003</span></div>
+      <div class="instrument-title"><span class="eyebrow muted">POST-SCRIM / MIDTOWN</span><h2>Rewind the moment.<br>Keep the context.</h2><span class="pill">SYNTHETIC EXAMPLE</span></div>
+      <div class="radar" aria-hidden="true"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="radar-line"></div><span class="radar-dot d1"></span><span class="radar-dot d2"></span><span class="radar-dot d3"></span><div class="radar-center">03<span>REVIEW MOMENTS</span></div><div class="radar-label label1">PLAN</div><div class="radar-label label2">RESET</div><div class="radar-label label3">OVERLAP</div></div>
+      <div class="hero-call"><span class="call-time">04:12</span><div><span class="micro">TANK · EXAMPLE TRANSCRIPT</span><p>“We’re down two. Back out, reset.”</p></div></div>
+      <div class="instrument-bottom"><span>OBSERVE <b>→</b> QUESTION <b>→</b> REVIEW</span><a href="#review" aria-label="Explore the synthetic review example">↗</a></div>
+    </div>
+  </section>
+  <div class="principle-strip"><div class="wrap"><span><b>01</b> Your comms stay local</span><span><b>02</b> Every player opts in</span><span><b>03</b> The coach keeps the judgment</span><span class="strip-note">NO CLOUD AI REQUIRED</span></div></div>
+
+  <section id="why" class="section wrap">
+    <div class="section-heading"><div><p class="eyebrow">01 / THE IDEA</p><h2>Good teams review the play.<br><span class="muted">Great reviews ask what was said.</span></h2></div><p>A VOD shows what happened. Comms help reveal what the team knew, planned, and called in that moment.</p></div>
+    <div class="problem-grid">
+      <article><span class="feature-symbol" aria-hidden="true">↺</span><h3>Less searching.<br>More reviewing.</h3><p>Long recordings bury the useful moments. The goal: bring relevant calls beside fight events so a coach can find the right conversation.</p></article>
+      <article><span class="feature-symbol" aria-hidden="true">≋</span><h3>Hear the call.<br>Check the context.</h3><p>A reset call, a late engage, a crowded channel. Each is a question to investigate with the VOD, never an automatic player verdict.</p></article>
+      <article><span class="feature-symbol" aria-hidden="true">⌁</span><h3>Keep the learning.<br>Own the data.</h3><p>Designed for local recordings, local transcripts, and deliberate sharing. Start small, verify the evidence, and take one lesson into the next block.</p></article>
+    </div>
+  </section>
+
+  <section id="review" class="section review-section">
+    <div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / INTERACTIVE REVIEW LAB</p><h2>Try the review.<br><span class="muted">Follow the evidence.</span></h2></div><p>This working browser demo uses hand-authored, fictional calls and events. It runs no AI, records nothing, and contains no real match results.</p></div>
+      <noscript><div class="notice">Enable JavaScript for the interactive lab. All documentation and the rest of this website remain available.</div></noscript>
+      <div class="lab" data-lab hidden>
+        <div class="lab-top"><span><span class="status-dot"></span> REVIEW ROOM <span class="muted">/ FICTIONAL SCRIM</span></span><span class="pill">SYNTHETIC DATA · NO AUDIO</span></div>
+        <div class="lab-tabs" role="tablist" aria-label="Example review moments">
+          <button type="button" id="tab-reset" role="tab" aria-controls="review-panel" aria-selected="true" data-scenario="reset">01 <span>Reset timing</span><span aria-hidden="true">↗</span></button>
+          <button type="button" id="tab-plan" role="tab" aria-controls="review-panel" aria-selected="false" tabindex="-1" data-scenario="plan">02 <span>Ultimate plan</span><span aria-hidden="true">↗</span></button>
+          <button type="button" id="tab-overlap" role="tab" aria-controls="review-panel" aria-selected="false" tabindex="-1" data-scenario="overlap">03 <span>Overlapping calls</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div id="review-panel" role="tabpanel" aria-labelledby="tab-reset" tabindex="0">
+          <div class="lab-columns">
+            <div class="timeline-panel">
+              <div class="timeline-heading"><div><p class="eyebrow muted" id="example-label">EXAMPLE 01 / RESET TIMING</p><h3 id="moment-title">A reset call. A second push.</h3></div><span class="clock" id="cursor-time">04:12</span></div>
+              <p class="lab-help">Move through the timeline to inspect a call or event.</p>
+              <div class="track-view"><div class="track-labels" aria-hidden="true"><span>TANK</span><span>DAMAGE</span><span>SUPPORT</span><span>EVENTS</span></div><div class="track-area" id="tracks"><div class="playhead" id="playhead"></div></div></div>
+              <label class="sr-only" for="timeline-cursor">Timeline position in seconds</label><input id="timeline-cursor" class="timeline-range" type="range" min="0" max="18" value="4" step="1">
+              <div class="axis"><span id="axis-start">04:08</span><span>SELECT A MOMENT · NO AUDIO PLAYBACK</span><span id="axis-end">04:26</span></div>
+              <div class="evidence-filters" role="group" aria-label="Filter timeline evidence"><button class="active" type="button" data-filter="all" aria-pressed="true">All evidence</button><button type="button" data-filter="call" aria-pressed="false">Comms</button><button type="button" data-filter="event" aria-pressed="false">Game events</button></div>
+              <div id="evidence-list" class="evidence-list" aria-label="Evidence timeline"></div>
+              <div class="alignment"><div><label for="sync-offset">Explore clock alignment</label><output id="offset-label" for="sync-offset">+0 s</output></div><input id="sync-offset" type="range" min="-5" max="5" value="0" step="1"><p id="offset-explanation">Game event times are unchanged. Real sessions need a verified sync point.</p></div>
+            </div>
+            <aside class="review-card" aria-label="Coach review card">
+              <div class="card-label"><span class="status-dot"></span> REVIEW CANDIDATE <span id="card-id">DEMO-R01</span></div>
+              <h3 id="review-question">Did everyone hear the reset?</h3><p id="observation"></p>
+              <div class="hypothesis"><span class="eyebrow">QUESTION FOR THE VOD</span><p id="hypothesis"></p></div>
+              <div class="evidence-refs" id="evidence-refs"></div>
+              <label class="field-label" for="verdict">Coach’s interpretation</label><select id="verdict"><option value="unreviewed">Unreviewed</option><option value="useful">Useful review moment</option><option value="context">Needs more context</option><option value="dismissed">Dismiss candidate</option></select>
+              <label class="field-label" for="coach-note">Your review note</label><textarea id="coach-note" rows="3" maxlength="2000" placeholder="What would you check in the VOD?"></textarea>
+              <p class="local-note">Notes stay in this tab’s memory until you close or reload it. Nothing is sent to a server.</p>
+              <button type="button" class="button primary export-button" id="export-review">Export sample review <span aria-hidden="true">↓</span></button>
+              <button type="button" class="reset-button" id="clear-review">Clear demo notes</button>
+            </aside>
+          </div>
+        </div>
+        <div class="lab-bottom"><span><b>OBSERVATION ≠ CONCLUSION</b> · Timing, transcription, and intent need human review.</span><a href="docs/demo.html">How this demo works ↗</a></div>
+      </div>
+      <p id="demo-status" class="sr-only" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="workflow" class="section wrap">
+    <div class="section-heading"><div><p class="eyebrow">03 / FROM SCRIM TO CONVERSATION</p><h2>Capture with consent.<br><span class="muted">Analyze after the match.</span></h2></div><p>The proposed pilot runs on an operator’s laptop. The public website and the private analysis application evolve independently.</p></div>
+    <ol class="workflow-grid"><li><span class="step">01 / CAPTURE</span><h3>Agree. Then record.</h3><p>Use a dedicated team channel. Each participant opts in. The starter’s recorder is designed to pause when consent is missing.</p><span class="tech">DISCORD → PER-SPEAKER OPUS</span></li><li><span class="step">02 / TRANSCRIBE</span><h3>Keep processing local.</h3><p>After the block, convert audio and run whisper.cpp on your machine. GPU processing is optional; model downloads need internet.</p><span class="tech">FFMPEG → WHISPER.CPP</span></li><li><span class="step">03 / CONNECT</span><h3>Put calls in context.</h3><p>Import compatible Workshop logs. Confirm map offsets, inspect fight windows, and check candidate calls against the recording.</p><span class="tech">WORKSHOP LOGS → SQLITE</span></li><li><span class="step">04 / REVIEW</span><h3>Choose the next lesson.</h3><p>Read the evidence, add coach context, dismiss weak candidates, and export a small set of moments worth discussing.</p><span class="tech">LOCAL DASHBOARD → TEAM REVIEW</span></li></ol>
+    <a class="text-link workflow-link" href="docs/architecture.html">Inspect data flow and trust boundaries <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="privacy-section"><div class="wrap privacy-layout"><div><p class="eyebrow">04 / PRIVATE BY DESIGN</p><h2>Your team.<br>Your machine.<br><em>Your call.</em></h2><p>Local-first reduces cloud dependence. Trust still depends on clear consent, careful handling, and a coach who knows the context.</p><a class="button secondary" href="docs/privacy.html">Read the privacy model <span aria-hidden="true">↗</span></a></div><div class="privacy-rows"><article><span>01</span><div><h3>Opt in, every session.</h3><p>Explain what is captured, who can access it, and when it is deleted. A player joining the channel is not consent to record.</p></div></article><article><span>02</span><div><h3>Local analysis. Explicit boundaries.</h3><p>No cloud AI API is required. Discord still transports the voice call; initial installs and model downloads use the network.</p></div></article><article><span>03</span><div><h3>Review signals, never player scores.</h3><p>No emotion detection, personality labels, or automated rankings. A transcript cannot establish intent or tell the whole story.</p></div></article><article><span>04</span><div><h3>Deletion needs a complete checklist.</h3><p>Raw-audio retention is configured in the starter. Shared exports, backups, logs, and derived reports also need review when data is removed.</p></div></article></div></div></section>
+
+  <section id="status" class="section wrap">
+    <div class="section-heading"><div><p class="eyebrow">05 / HONEST PROJECT STATUS</p><h2>A useful foundation.<br><span class="muted">An open validation process.</span></h2></div><p>Recovered starter: Overwatch Comms Lab v0.3.0. Source inspected November 3, 2026. The analysis app has not been validated on the target laptop in this website project.</p></div>
+    <div class="roadmap-grid"><article><div class="status-label available">AVAILABLE HERE</div><h3>Explore & understand</h3><ul><li>Interactive synthetic review lab</li><li>Coach notes and sample export</li><li>Architecture and pilot guides</li><li>Independent Pages deployment</li></ul><a href="docs/">Read the documentation ↗</a></article><article><div class="status-label prototype">SOURCE PRESENT · PILOT NEEDED</div><h3>Validate the local core</h3><ul><li>Consent-gated voice capture</li><li>whisper.cpp transcription</li><li>Workshop parser and review cards</li><li>Local dashboard and exports</li></ul><a href="docs/feature-status.html">See evidence and limitations ↗</a></article><article><div class="status-label planned">PLANNED · NO SHIP DATES</div><h3>Earn the next layer</h3><ul><li>Verified clock synchronization</li><li>Team glossary and corrections</li><li>Packaged Windows installation</li><li>Coach-approved longitudinal trends</li></ul><a href="docs/roadmap.html">Explore milestone criteria ↗</a></article></div>
+  </section>
+
+  <section id="hardware" class="section hardware-section wrap"><div class="hardware-copy"><p class="eyebrow">06 / START WITH WHAT YOU HAVE</p><h2>Built around a laptop.<br><span class="muted">Sized by a real pilot.</span></h2><p>The initial target is a Windows gaming laptop with an RTX 5090. That is a development target, not a minimum requirement or a verified performance result.</p><p>The website needs only a modern browser. The analysis app needs Node.js 24+, FFmpeg, whisper.cpp, a model, and storage. A compatible CUDA setup can accelerate post-scrim transcription.</p><a class="text-link" href="docs/hardware.html">Hardware, storage & cost assumptions →</a></div><div class="hardware-card"><span class="eyebrow">PLANNING PROFILE / NOT A BENCHMARK</span><dl><div><dt>Compute</dt><dd>CPU first, GPU optional</dd></div><div><dt>Suggested pilot RAM</dt><dd>16–32 GB <span>estimate</span></dd></div><div><dt>Disk headroom</dt><dd>20–50 GB <span>estimate</span></dd></div><div><dt>Processing time</dt><dd>Measure on your laptop</dd></div><div><dt>Cloud AI spend</dt><dd>No paid API required</dd></div></dl><p>Electricity, hardware, storage, and operator time still have a cost. Record video only if your pilot needs it.</p></div></section>
+
+  <section class="section wrap faq-section"><p class="eyebrow">07 / BEFORE YOU START</p><div class="faq-layout"><h2>A few clear<br><span class="muted">answers.</span></h2><div class="faq"><details><summary>Is this the actual analysis application?</summary><p>This is the public website and a synthetic browser demo. The recovered analysis starter is a separate application. This repository does not record, transcribe, import real sessions, or run a local model.</p></details><details><summary>Can the whole workflow work offline?</summary><p>Transcription and review are designed to run locally after software and models are installed. Discord recording requires an internet connection, and setup needs downloads. This website uses no third-party fonts, analytics, or scripts.</p></details><details><summary>Does Voice Stat - OW know why we lost a fight?</summary><p>No. Candidate moments connect observable calls and events. Clock errors, missing calls, game context, and tactical intent can change the interpretation. A coach must check the original evidence.</p></details><details><summary>Can I help build or test it?</summary><p>Yes. Useful contributions include parser fixtures with permission, synthetic test cases, accessibility reviews, and consented pilot feedback. The contributor guide explains what to share and what to keep private.</p><a href="docs/contributing.html">Contributor guide →</a></details><details><summary>Is this an official Overwatch product?</summary><p>No. Voice Stat - OW is an independent project with no affiliation or endorsement from Blizzard Entertainment, Discord, ScrimTime, or Parsertime.</p></details></div></div></section>
+
+  <section class="closing wrap"><div><p class="eyebrow">THE NEXT BLOCK STARTS WITH ONE BETTER QUESTION.</p><h2>Bring the context.<br><em>Build the review.</em></h2></div><div><a class="button primary" href="docs/getting-started.html">Start with the safe demo <span aria-hidden="true">↗</span></a><a class="text-link" href="docs/contributing.html" data-repository-link>Help shape Voice Stat - OW →</a></div></section>
+</main>
+<footer class="footer wrap"><div><a href="./" class="brand"><img src="assets/mark.svg" width="28" height="28" alt=""><span class="brand-name">Voice Stat <span class="brand-game">- OW</span></span></a><p>Find the moment. Keep the context.</p></div><div class="footer-links"><a href="docs/">Documentation</a><a href="docs/privacy.html">Privacy</a><a href="docs/roadmap.html">Roadmap</a><a href="docs/deployment.html">Deploy this site</a></div><p class="legal">Independent project. Overwatch is a trademark of Blizzard Entertainment. All sample calls and match events on this website are fictional.</p></footer>
+</body>
+</html>

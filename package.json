@@ -1,0 +1,17 @@
+{
+  "name": "voice-stat-ow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The independent public website and documentation for Voice Stat - OW.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "preview-file": "node scripts/build.mjs && node scripts/portable-preview.mjs",
+    "verify": "npm run build && npm run check && npm test"
+  }
+}

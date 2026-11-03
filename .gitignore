@@ -1,0 +1,16 @@
+dist/
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+.data/
+recordings/
+transcripts/
+*.sqlite*
+*.ogg
+*.wav
+*.mp4
+*.mkv
+playwright-report/
+test-results/

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "sessionLabel": "Fictional Midtown review",
+  "clock": {
+    "basis": "relative-seconds",
+    "uncertainty": "Hand-authored example. No measured clock alignment."
+  },
+  "evidence": [
+    {
+      "id": "EVENT-R1",
+      "kind": "event",
+      "atSeconds": 1,
+      "text": "A teammate is eliminated."
+    },
+    {
+      "id": "CALL-R1",
+      "kind": "call",
+      "atSeconds": 4,
+      "endSeconds": 7,
+      "speaker": "TANK",
+      "text": "We’re down two. Back out, reset."
+    },
+    {
+      "id": "CALL-R2",
+      "kind": "call",
+      "atSeconds": 7,
+      "endSeconds": 10,
+      "speaker": "DAMAGE",
+      "text": "Their support is one. I can finish."
+    },
+    {
+      "id": "EVENT-R2",
+      "kind": "event",
+      "atSeconds": 10,
+      "text": "A second teammate is eliminated."
+    },
+    {
+      "id": "CALL-R3",
+      "kind": "call",
+      "atSeconds": 12,
+      "endSeconds": 15,
+      "speaker": "SUPPORT",
+      "text": "Wait for five. Next fight together."
+    }
+  ],
+  "cards": [
+    {
+      "id": "DEMO-R01",
+      "observation": "In this fictional sequence, a reset call is followed by a forward target call and another elimination event. The timing is visible; the reason is not.",
+      "question": "Did everyone hear the reset?",
+      "evidenceIds": [
+        "CALL-R1",
+        "CALL-R2",
+        "EVENT-R2"
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic interface fixture; not a real session.",
+    "Timing does not establish intent or causation.",
+    "No analysis model or audio playback is used."
+  ]
+}
