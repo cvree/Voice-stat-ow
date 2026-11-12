@@ -30,6 +30,10 @@ The source archive inspected on November 3, 2026 identifies the analysis applica
 
 The archive contains test files for analytics, reports, parser behavior, imports, and dashboard behavior. They were not executed as part of building this separate website. Do not turn test-file presence into a claim of a passed application test suite.
 
+## Researched and designed, not built
+
+The [Discord bot](discord-bot.md), [transcription](transcription.md), [ScrimTime and Parsertime](parsertime.md), and [comms metrics](comms-metrics.md) pages describe designs and proposed tests dated November 12, 2026. The Parsertime findings come from reading its public source and sample logs. The recovered recorder predates Discord's mandatory voice encryption and must be re-proven before any capture claim.
+
 ## Planned functionality
 
 Verified shared sync markers, precise VOD links, a signed Windows installer, glossary correction memory, encrypted sharing bundles, and longitudinal coach-approved trends remain roadmap work. No release dates or performance guarantees are attached.

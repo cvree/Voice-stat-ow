@@ -9,7 +9,7 @@ await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(resolve(root,'site'),dist,{recursive:true});
 await writeFile(resolve(dist,'site-config.json'),JSON.stringify(config,null,2)+'\n');
 await writeFile(resolve(dist,'.nojekyll'),'');
-const docList=[['index','Overview'],['getting-started','Getting started'],['architecture','Architecture'],['feature-status','Feature status'],['hardware','Hardware & costs'],['privacy','Privacy & retention'],['pilot','Pilot protocol'],['roadmap','Roadmap'],['demo','Demo & data contract'],['contributing','Contributing'],['deployment','Deploy the website'],['provenance','Sources & provenance']];
+const docList=[['index','Overview'],['getting-started','Getting started'],['architecture','Architecture'],['feature-status','Feature status'],['hardware','Hardware & costs'],['privacy','Privacy & retention'],['discord-bot','Discord bot'],['transcription','Auto-transcription'],['parsertime','ScrimTime & Parsertime'],['comms-metrics','Comms metrics'],['pilot','Pilot protocol'],['roadmap','Roadmap'],['demo','Demo & data contract'],['contributing','Contributing'],['deployment','Deploy the website'],['provenance','Sources & provenance']];
 await mkdir(resolve(dist,'docs'),{recursive:true});
 const home=await readFile(resolve(root,'site/index.html'),'utf8');
 const header=home.match(/<header[\s\S]*?<\/header>/)[0].replaceAll('href="./"','href="../"').replaceAll('src="assets/','src="../assets/').replaceAll('href="#','href="../index.html#').replaceAll('href="docs/','href="');

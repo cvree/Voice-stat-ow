@@ -13,6 +13,10 @@ The public website makes that idea inspectable. The separate local analysis star
 | Inspect components, storage, and clocks | [Architecture](architecture.md) |
 | Estimate local hardware and operating costs | [Hardware and costs](hardware.md) |
 | Understand consent, retention, and deletion | [Privacy model](privacy.md) |
+| Build capture that works under Discord's voice encryption | [Discord bot](discord-bot.md) |
+| Set up hands-free transcription and measure it | [Automatic transcription](transcription.md) |
+| Join voice to ScrimTime logs and Parsertime fights | [ScrimTime and Parsertime](parsertime.md) |
+| See how comms are counted, and what is never scored | [Comms metrics](comms-metrics.md) |
 | Run a small consenting test | [Pilot protocol](pilot.md) |
 | Contribute toward a milestone | [Roadmap](roadmap.md) and [Contributing](contributing.md) |
 | Publish and maintain the site | [Deployment](deployment.md) |

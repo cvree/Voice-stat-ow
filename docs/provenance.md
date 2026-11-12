@@ -37,6 +37,8 @@ This project has no published experimental findings in this repository. The publ
 - [GitHub Pages publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site): owner configuration step.
 - [whisper.cpp](https://github.com/ggml-org/whisper.cpp): local transcription implementation and CPU/CUDA build guidance.
 - [OBS multiple-audio-track guide](https://obsproject.com/kb/multiple-audio-track-recording-guide): optional VOD capture context; OBS is not integrated into this website.
+- [Parsertime source](https://github.com/luxdotdev/parsertime): MIT-licensed parser, event types, fight grouping, and sample logs, read at commit `09cde05` on November 12, 2026.
+- [discord.js issue 11419](https://github.com/discordjs/discord.js/issues/11419): voice receive failures under Discord's mandatory encryption.
 - [Node.js downloads](https://nodejs.org/en/download): website/application runtime installation.
 - [pnpm installation](https://pnpm.io/installation): package manager used by the recovered application.
 

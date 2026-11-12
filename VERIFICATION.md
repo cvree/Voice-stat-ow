@@ -9,3 +9,7 @@ Full Chromium rendering, mobile visual inspection, screen-reader behavior, and b
 No remote GitHub repository was created, no workflow was executed on GitHub, and no live website was published. The available GitHub connection did not expose repository creation or Pages configuration. `README.md` and `docs/deployment.md` contain the exact owner steps to publish.
 
 The recovered analysis application was inspected but not installed or run. Real Discord capture, consent transitions, Windows/CUDA compatibility, transcription accuracy, alignment precision, deletion completeness, and coaching usefulness remain pilot validation work.
+
+## Update — November 12, 2026
+
+Four research pages and a rewritten roadmap were added, bringing the build to 16 documentation pages. `npm run verify` was rerun. The new pages are designs and proposed tests. The Parsertime findings come from reading its public source and sample logs at commit `09cde05`; the clock-offset table was computed from those samples. No Discord capture, transcription, alignment, or metric was run. `workshop.codes`, `docs.discord.com`, and `discordjs.guide` were unreachable from the research environment and were not read.
